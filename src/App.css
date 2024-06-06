@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(3, 3, 50);
+}
+
+.input-group{
+    width: 60%;
+}
+h2{
+    text-transform: capitalize;
+}
+.card{
+    max-width: 60%;
+}
+.card-title{
+    position: absolute;
+    padding: 20px;
+    color: green;
+    font-size: 20px;
+}
+.card-date{
+    position: absolute;
+    padding-left: 20px;
+    margin-top: 60px;
+    color: green;
+}
+.card-temp{
+    position: absolute;
+    padding-left: 20px;
+    margin-top: 180px;
+    font-size: 45px;
+    font-weight: bold;
+}
+.card-desc{
+    position: absolute;
+    padding-left: 20px;
+    margin-top: 230px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.pronostico{
+    margin-left: 3px;
+}
+.img-fluid{
+    height: 100%;
+}
+.card-text-mx{
+    color: red;
+}
+.card-text-v{
+ color: rgb(35, 224, 35);
+}
+.card-text-b{
+    color: blue;
+}
+h5{
+    font-size: 15px;
+}
+.p-pronostico{
+    font-size: 10px;
+    color: rgb(35, 224, 35);
+}
+.description{
+    font-size: 10px;
+}
+.temp{
+    font-size: 10px;
+}
+@media (max-width: 600px) {
+    .input-group{
+        width: 70%;
+    }
+   .img-fluid{
+    height: 400px;
+   }
+   .card{
+    max-width: 100%;
+ }
+}
