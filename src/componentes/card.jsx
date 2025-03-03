@@ -34,6 +34,14 @@ export default function Card({showdingData,loudingData,weather, forecast}) {
       forecastDate6 = forecast.list[2].dt_txt.substring(8, 10) + '/' + forecast.list[2].dt_txt.substring(5, 7) + '/' + forecast.list[2].dt_txt.substring(0, 4) + ' ' +  forecast.list[2].dt_txt.substring(11, 13);
       forecastDate9 = forecast.list[3].dt_txt.substring(8, 10) + '/' + forecast.list[3].dt_txt.substring(5, 7) + '/' + forecast.list[3].dt_txt.substring(0, 4) + ' ' +  forecast.list[3].dt_txt.substring(11, 13);
     }
+    // Objeto con imágenes de fondo por ciudad
+  const cityImages = {
+  "Santo Domingo": "https://robertocavada.com/wp-content/uploads/2021/08/unnamed-17.jpg",
+  "Madrid": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVDl3yHRWCpqCWasxbKfqKI-ljYxzXLFF51A&s",
+  "New York": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMobIoayWpuXIJbYEdGAx9H9c5Ck3Q85kSuw&s",
+  "Paris": "https://res.cloudinary.com/dtljonz0f/image/upload/c_auto,ar_1:1,w_3840,g_auto/f_auto/q_auto/v1/gc-v1/paris/3%20giorni%20a%20Parigi%20Tour%20Eiffel?_a=BAVARSAP0",
+  };
+  const cityImage = cityImages[weather.name] || "https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic2788062.jpg?w=1900&h=1426&p=top";
   return (
     <div className="mt-5">
       {showdingData===true?(
@@ -45,7 +53,8 @@ export default function Card({showdingData,loudingData,weather, forecast}) {
                     <p className="card-date">{date}</p>
                     <h1 className="card-temp">{(weather.main.temp - 273.15).toFixed(1)}ºC</h1>
                     <p className="card-desc"><img src={iconUrl} alt="icon"/>{weather.weather[0].description}</p>
-                    <img src="https://robertocavada.com/wp-content/uploads/2021/08/unnamed-17.jpg" className="img-fluid rounded-start" alt="..."/>
+                    <img src={cityImage} className="img-fluid rounded-start" alt="..." />
+
                 </div>
                 <div className="col-md-8 dato">
                   <div className="card-body text-start mt-2">
